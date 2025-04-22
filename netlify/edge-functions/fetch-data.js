@@ -1,6 +1,6 @@
 export default async (request, context) => {
   const url = new URL(request.url);
-  const userId = url.searchParams.get("where") || "1"; // default to 1
+  const where = url.searchParams.get("where") || "1"; // default to 1
 
   const apiUrl = `https://dwharuba.erp4.io/version-test/api/1.1/wf/healthcard?where=${where}`;
 
