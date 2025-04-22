@@ -1,8 +1,8 @@
 export default async (request, context) => {
   const url = new URL(request.url);
-  const userId = url.searchParams.get("userId") || "1"; // default to 1
+  const userId = url.searchParams.get("where") || "1"; // default to 1
 
-  const apiUrl = `https://dwharuba.erp4.io/version-test/api/1.1/wf/healthcard?where${userId}`;
+  const apiUrl = `https://dwharuba.erp4.io/version-test/api/1.1/wf/healthcard?where=${where}`;
 
   const response = await fetch(apiUrl, {
     headers: {
